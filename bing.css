@@ -1,0 +1,331 @@
+/* Arquivo CSS */
+#sidebarCheck {
+    display: none;
+    /* Checkbox oculto */
+}
+
+#sidebarButton {
+  font-size: 1.2em;
+  padding: 5px 20px;
+  color: rgb(218, 0, 55);
+  background-color: rgb(51, 51, 51);
+  text-shadow: rgb(0, 0, 0) 2px 2px;
+  border-radius: 5px;
+}
+
+#sidebarButton:hover {
+    text-shadow: none;
+}
+
+
+#sidebarButton,
+#closeButton {
+    /* position: fixed; */
+    left: 0;
+    /* Botão à esquerda */
+    bottom: 0;
+    margin-top: 0;
+    background-color: #DA0037;
+    /* Cor do botão */
+    color: #fff;
+    /* Cor do texto do botão */
+    border: none;
+    /* Sem borda */
+    /* Espaçamento interno */
+    cursor: pointer;
+    /* Cursor de mão ao passar o mouse */
+    z-index: 1;
+    /* Botão abaixo da sidebar */
+
+/* novo código meu */
+    font-size: 1.2em;
+    /*padding: 5px 20px;*/
+    color: #DA0037;
+    background-color: #333333;
+    border-radius: 5px;
+}
+
+#closeButton {
+/* novo código meu */
+    font-size: 1.2em;
+    /*padding: 5px 20px;*/
+    color: #DA0037;
+    background-color: #333333;
+    border-radius: 5px;
+    padding: 0.72em 2em 0.72em 2em;
+}
+
+#sidebarButton {
+    opacity: 1;
+    /* Botão "Mostrar sidebar" inicialmente visível */
+}
+
+#sidebarButton:hover {
+    color: white;
+    transition: 0.8s;
+    /*box-shadow: 0 4px 4px 0 rgba(110, 110, 110, 0.75);*/
+    background-color: #DA0037;
+}
+
+#closeButton {
+    /*margin-top: -0.01em;*/
+    opacity: 0;
+    /* Ícone "X" inicialmente oculto */
+    border-radius: 5px;
+    /* borda quadrada */
+}
+
+#closeButton:hover {
+    color: white;
+    /*box-shadow: 0 4px 4px 0 rgba(110, 110, 110, 0.75);*/
+    background-color: #DA0037;
+}
+
+
+
+.Autosidebar {
+    width: 22em;
+    position: fixed;
+    left: -22em;
+    /* Sidebar inicialmente oculta à esquerda */
+    height: 100%;
+    background: #191919;
+    /* Cor da sidebar */
+    transition: left 0.1s;
+    /* Animação */
+    z-index: 2;
+    /* Sidebar sobre o botão */
+    overflow-y: auto;
+    /* top: 4em; */
+    /*top: 0.125em;*/
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    /* ul{
+        padding-left: 0.25em;
+    } */
+}
+/* 
+#sidebar {
+    width: 22em;
+    position: fixed;
+    left: -22em;
+ 
+    height: 100%;
+    background: #191919;
+    
+    transition: left 0.3s;
+    
+    z-index: 2;
+  
+    overflow-y: auto;
+    top: 4em;
+} */
+
+.menu {
+    list-style: none;
+    padding-left: 0.25em;
+}
+
+
+/* .menu {
+    list-style: none;
+    padding-left: 4em;
+} */
+
+.opcao a {
+    cursor: pointer
+}
+
+#sidebarCheck:checked~#sidebar {
+    left: 0;
+    /* Sidebar visível ao marcar o checkbox */
+}
+
+#sidebarCheck:checked~#sidebarButton {
+    opacity: 0;
+    /* Botão "Mostrar sidebar" oculto ao marcar o checkbox */
+}
+
+#sidebarCheck:checked~#sidebar #closeButton {
+    opacity: 1;
+    /* Ícone "X" visível ao marcar o checkbox */
+}
+
+.menu .opcao:first-child {
+    margin-top: 2.2em;
+    /* Margem superior adicionada ao primeiro elemento "Opção 1" */
+}
+
+.menu .opcao .submenu {
+    display: none;
+    /* Submenu inicialmente oculto */
+}
+
+.menu .opcao:hover .submenu {
+    display: block;
+    /* Submenu visível ao passar o mouse na opção */
+}
+
+.menu .opcao {
+    background-color: gray;
+    padding: 0.2em 0em 0.2em 0em;
+    border-width: 2px;
+    border-color: #191919;
+    border-style: outset;
+}
+
+.submenu li {
+    color: #fff;
+    /* Cor dos links */
+}
+
+
+.submenu li a {
+    color: #fff;
+    /* Cor dos links */
+}
+
+.submenu li a:hover {
+    color: gray;
+    /* Cor dos links ao passar o mouse */
+}
+
+.opcao ul {
+    list-style: none;
+    padding-left: 0;
+    display: inline-block;
+}
+
+.submenu li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.opcao .submenu p {
+    margin: 0.25em 0em 0.25em 0em;
+}
+
+
+
+/* .novaUl {
+    display: block;
+    margin-bottom: 0;
+} */
+
+/* .novaSideBarLabel label ul a:hover {
+    background-color: rgb(218, 0, 55);
+    cursor: pointer;
+} */
+
+
+
+.novaInput {
+    display: none;
+}
+
+.novaInput:checked+label+ul {
+    display: block;
+}
+
+.novaUl {
+    display: none;
+}
+
+
+.novaSideBarLabel {
+    display: block;
+    padding: 10px;
+    background-color: #000000;
+    /*transition: background-color 0.3s;*/
+    font-size: 1em;
+}
+
+
+
+.side ul {
+    /* display: block; */
+    margin-bottom: 0;
+
+    margin-top: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+.side label:hover,
+.side a:hover,
+.side ul a:hover {
+    background-color: rgb(218, 0, 55);
+    cursor: pointer;
+}
+
+.side ul a:hover {
+    background-color: rgb(218, 0, 55);
+    color: white;
+}
+
+.novaSidebarUlA {
+    display: block;
+    color: #DA0037;
+    padding: 1em;
+    text-decoration: none;
+}
+
+
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.liClass {
+    list-style: none;
+}
+
+
+/* Código CSS */
+/* .sidebar {
+    width: 20em;
+    height: 100vh;
+    position: fixed;
+    overflow: auto;
+}
+
+.sidebar input[type="checkbox"]  :not(ul) {
+    display: none;
+}
+
+.sidebar ul {
+    display: none;
+}
+
+.sidebar input[type="checkbox"]:checked+label+ul {
+    display: block;
+    margin-bottom: 0;
+} */
+
+/* Adiciona animação de hover e estiliza as listas primárias e secundárias */
+/* .sidebar label,
+.sidebar a {
+    display: block;
+    padding: 10px;
+    background-color: #000000;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+.sidebar label:hover,
+.sidebar a:hover,
+.sidebar ul a:hover {
+    background-color: rgb(218, 0, 55);
+    cursor: pointer;
+}  */
+
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 640px) {
+    .Autosidebar {
+        width: 100vw;
+        position: fixed;
+        left: -100vw;
+      }
+}
